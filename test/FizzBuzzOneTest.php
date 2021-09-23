@@ -74,7 +74,7 @@ final class FizzBuzzOneTest extends TestCase
                     $this->assertTrue($test_arr[$key] % 15 === 0);
                     break;
                 default:
-                    $this->assertGreaterThan(0, (int)$test_arr[$key]);
+                    $this->assertSame((int)$capture_arr[$key], $test_arr[$key]);
                     break;
             }
         }
