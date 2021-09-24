@@ -36,11 +36,10 @@ class FizzBuzzOne
         return $result;
     }
 
-    public function print_result(): int
+    public static function print_result(int $start, int $stop): int
     {
-        return print($this->result_string() . "\n");
+        return print((new FizzBuzzOne($start, $stop))->result_string() . "\n");
     }
 }
 
-$fb  = new FizzBuzzOne(1, 20);
-$fb->print_result();
+FizzBuzzOne::print_result(1, 20);
