@@ -10,7 +10,7 @@ final class FizzBuzzOneTest extends TestCase
     {
         $fb = new FizzBuzzOne(1, 100);
         $fb_str = $fb->result_string();
-        $capture_arr = array_filter(explode(" ", $fb_str));
+        $capture_arr = explode(" ", trim($fb_str));
         $this->assertSame(100, count($capture_arr));
     }
 
@@ -60,7 +60,7 @@ final class FizzBuzzOneTest extends TestCase
     {
         $fb = new FizzBuzzOne(1, 100);
         $fb_str = $fb->result_string();
-        $capture_arr = array_filter(explode(" ", $fb_str));
+        $capture_arr = explode(" ", trim($fb_str));
         $test_arr = range(1, 100);
         foreach ($capture_arr as $key => $val) {
             switch ($val) {
